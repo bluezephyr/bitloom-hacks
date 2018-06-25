@@ -1,0 +1,6 @@
+[submodule "bitloom-core"]
+	path = bitloom-core
+	url = https://github.com/bluezephyr/bitloom-core.git
+[submodule "bitloom-avr"]
+	path = bitloom-avr
+	url = https://github.com/bluezephyr/bitloom-avr.git

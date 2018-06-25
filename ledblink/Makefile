@@ -17,7 +17,7 @@ SRC    := scheduler.c \
 # Include directories (relative root)
 INC    := bitloom-core/include \
 	  bitloom-core/include/hal \
-	  ledblink/config \
+	  ledblink/avr_config \
 	  ledblink/blinktask \
 
 
