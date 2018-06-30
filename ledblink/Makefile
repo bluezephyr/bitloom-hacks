@@ -10,6 +10,7 @@ ROOT   := ..
 SRC    := scheduler.c \
 	  avr_timer.c \
 	  avr_pin_digital_io.c \
+	  avr_port_config.c \
 	  main.c \
 	  blinktask.c \
 
@@ -30,6 +31,7 @@ INC_A  	:=
 VPATH = $(ROOT)/bitloom-core/src/scheduler \
         $(ROOT)/bitloom-avr/avr_hal \
         $(ROOT)/ledblink/src \
+        $(ROOT)/ledblink/avr_config \
         $(ROOT)/ledblink/blinktask \
 
 
@@ -44,8 +46,8 @@ BAUD 	= 9600
 #-----------------------------------------------------------------------------#
 #			PROGRAMMER DETAILS
 #-----------------------------------------------------------------------------#
-PROGRAMMER_TYPE = avrisp
-PROGRAMMER_ARGS = -b 19200 -P /dev/ttyACM0
+PROGRAMMER_TYPE = usbtiny
+PROGRAMMER_ARGS = -b 19200
 
 
 #-----------------------------------------------------------------------------#

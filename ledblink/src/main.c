@@ -12,18 +12,13 @@
 #include "scheduler.h"
 #include "blinktask.h"
 #include "port_config.h"
-
-static void init_port(void)
-{
-    // Initialize the LEDs.
-    LED_DDR |= (1 << LED_GREEN);
-    LED_PORT &= ~(1 << LED_GREEN);
-}
+#include "timer.h"
 
 int main(void)
 {
+    timer_init();
     schedule_init();
-    init_port();
+    port_init();
 
     // Task initializations
     blink_task_init(schedule_add_task(240, 0, blink_task_run));
