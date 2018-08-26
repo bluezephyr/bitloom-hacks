@@ -3,23 +3,25 @@
 #-----------------------------------------------------------------------------#
 
 # Project name and source files
-NAME   := ledblink
+NAME   := oledtest
 ROOT   := ..
 
 # Name of all source files (all names must be unique)
-SRC    := scheduler.c \
-	  avr_timer.c \
-	  avr_pin_digital_io.c \
-	  avr_port_config.c \
-	  main.c \
-	  blinktask.c \
+SRC    := scheduler.c\
+	  avr_timer.c\
+	  avr_i2c.c\
+	  oledtask.c\
+	  ssd1306.c\
+	  i2c_master.c\
+	  main.c\
 
 
 # Include directories (relative root)
-INC    := bitloom-core/include \
-	  bitloom-core/include/hal \
-	  ledblink/avr_config \
-	  ledblink/blinktask \
+INC    := bitloom-core/include\
+	  bitloom-core/include/hal\
+	  bitloom-ssd1306/include\
+	  oledtest/avr_config\
+	  olestest/src\
 
 
 # Include directories (absolute paths)
@@ -28,11 +30,12 @@ INC_A  	:=
 
 # VPATH is used to build all object files locally
 # List all source code directories
-VPATH = $(ROOT)/bitloom-core/src/scheduler \
-        $(ROOT)/bitloom-avr/avr_hal \
-        $(ROOT)/ledblink/src \
-        $(ROOT)/ledblink/avr_config \
-        $(ROOT)/ledblink/blinktask \
+VPATH = $(ROOT)/bitloom-core/src/scheduler\
+        $(ROOT)/bitloom-core/src/i2c_master\
+	$(ROOT)/bitloom-avr/avr_hal\
+        $(ROOT)/bitloom-ssd1306/src\
+        $(ROOT)/oledtest/src\
+        $(ROOT)/oledtest/avr_config\
 
 
 #-----------------------------------------------------------------------------#
