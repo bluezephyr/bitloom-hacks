@@ -40,3 +40,9 @@ bitloom_unittests
 *.idb
 *.pdb
 
+# Clion
+.idea
+
+# CMake
+build*
+cmake-*
