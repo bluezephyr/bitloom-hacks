@@ -9,10 +9,10 @@
  *
  */
 
-#include "scheduler.h"
+#include "core/scheduler.h"
+#include "hal/timer.h"
+#include "config/port_config.h"
 #include "blinktask.h"
-#include "port_config.h"
-#include "timer.h"
 
 int main(void)
 {

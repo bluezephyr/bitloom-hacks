@@ -9,9 +9,9 @@
  */
 
 #include <stdbool.h>
+#include "hal/pin_digital_io.h"
+#include "config/port_config.h"
 #include "blinktask.h"
-#include "pin_digital_io.h"
-#include "port_config.h"
 
 // This id is given by the scheduler when the task is added.
 static uint8_t blink_task_id = 0;
@@ -23,7 +23,6 @@ void blink_task_init (uint8_t taskid)
     blink_task_id = taskid;
     led_activated = true;
 }
-
 
 void blink_task_run (void)
 {
