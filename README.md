@@ -12,6 +12,23 @@ Bitloom core.  The timer interface and the IO interface are implemented by
 the submodule bitloom-avr.  The port configuration is a custom implentation
 for this specific hack.
 
+To build the program for AVR, follow the steps below.  It is assumed that
+the an AVR cross compilation toolchain is installed on the computer and that an
+USBTinyISP programmer is used to flash the board.
+
+ 1. git clone https://github.com/bluezephyr/bitloom-hacks.git
+ 1. cd bitloom-hacks
+ 1. git submodule update --init
+ 1. mkdir ledblink/build
+ 1. cd ledblink/build
+ 1. cmake .. -DCMAKE_TOOLCHAIN_FILE=../../bitloom-avr/avr-gcc-toolchain.cmake -DCONFIG=avr_config
+ 1. make
+ 1. make flash
+
+The program will then be flashed to the MCU and the LED connected to PIN PB1
+will start to blink.
+
+
 ## OLED Test
 The OLED Test (oledtest) is a hack to try the SSD1306 OLED display using the
 Bitloom framework.  The hack is currently implemented for the ATMega328P MCU
