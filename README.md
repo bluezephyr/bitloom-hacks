@@ -5,10 +5,10 @@ microcontrollers; at the moment AVR (ATMega328P and ATTiny).
 
 ## LEB Blink
 The LED Blink (ledblink) hack is a trivial program that flashes a LED on and
-of at a regular interval (240 ms).  The program has one task (blink_task)
+off at a regular interval (240 ms).  The program has one task (blink_task)
 that turns on and off the LED using the pin_digital_io interface.  The current
-implementation runs on an ATMega328P and utilizes the HAL defined by the
-Bitloom core.  The timer interface and the IO interface are implemented by
+implementation runs on an ATMega328P and utilizes the HAL declared by the
+BitLoom core.  The timer interface and the IO interface are implemented by
 the submodule bitloom-avr.  The port configuration is a custom implentation
 for this specific hack.
 
