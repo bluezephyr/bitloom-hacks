@@ -7,6 +7,3 @@
 [submodule "bitloom-ssd1306"]
 	path = bitloom-ssd1306
 	url = https://github.com/bluezephyr/bitloom-ssd1306
-[submodule "bitloom-costumes"]
-	path = bitloom-costumes
-	url = git@github.com:bluezephyr/bitloom-costumes.git
